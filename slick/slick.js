@@ -102,7 +102,8 @@
                 vertical: false,
                 verticalSwiping: false,
                 waitForAnimate: true,
-                zIndex: 1000
+                zIndex: 1000,
+                nonce: null
             };
 
             _.initials = {
@@ -637,6 +638,11 @@
 
         newSlides = document.createDocumentFragment();
         originalSlides = _.$slider.children();
+
+        var nonce = this.options.nonce
+        if(nonce) {
+          originalSlides.attr('nonce', nonce)
+        }
 
         if(_.options.rows > 0) {
 
