@@ -4,6 +4,7 @@ var rename = require('gulp-rename');
 var sass = require('gulp-sass');
 var minifyCSS = require('gulp-clean-css');
 var del = require('del');
+var sass = require('gulp-sass')(require('node-sass'));
 
 // Remove old files
 gulp.task('clean', function() {
